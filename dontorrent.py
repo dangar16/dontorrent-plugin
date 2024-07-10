@@ -4,7 +4,6 @@
 
 from helpers import download_file, retrieve_url
 from novaprinter import prettyPrinter
-from unicodedata import normalize
 # some other imports if necessary
 import re
 
