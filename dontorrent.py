@@ -18,7 +18,7 @@ class dontorrent(object):
     possible categories are ('all', 'anime', 'books', 'games', 'movies', 'music', 'pictures', 'software', 'tv').
     """
 
-    url = 'https://dontorrent.cologne'
+    url = 'https://dontorrent.cricket'
     name = 'dontorrent'
     supported_categories = {
         'all': '',
