@@ -19,7 +19,7 @@ class dontorrent(object):
     """
 
     url = 'https://dontorrent.exposed'
-    name = 'dontorrent'
+    name = 'DonTorrent'
     supported_categories = {
         'all': '',
     }
