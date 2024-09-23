@@ -4,20 +4,9 @@
 
 from helpers import download_file, retrieve_url
 from novaprinter import prettyPrinter
-# some other imports if necessary
 import re
 
 class dontorrent(object):
-    """
-    `url`, `name`, `supported_categories` should be static variables of the engine_name class,
-     otherwise qbt won't install the plugin.
-
-    `url`: The URL of the search engine.
-    `name`: The name of the search engine, spaces and special characters are allowed here.
-    `supported_categories`: What categories are supported by the search engine and their corresponding id,
-    possible categories are ('all', 'anime', 'books', 'games', 'movies', 'music', 'pictures', 'software', 'tv').
-    """
-
     url = 'https://dontorrent.exposed'
     name = 'DonTorrent'
     supported_categories = {
@@ -30,30 +19,13 @@ class dontorrent(object):
         """
 
     def download_torrent(self, url):
-        """
-        Providing this function is optional.
-        It can however be interesting to provide your own torrent download
-        implementation in case the search engine in question does not allow
-        traditional downloads (for example, cookie-based download).
-        """
-        
         return download_file(url)
         
 
     # DO NOT CHANGE the name and parameters of this function
     # This function will be the one called by nova2.py
     def search(self, what, cat='all'):
-        """
-        Here you can do what you want to get the result from the search engine website.
-        Everytime you parse a result line, store it in a dictionary
-        and call the prettyPrint(your_dict) function.
-
-        `what` is a string with the search tokens, already escaped (e.g. "Ubuntu+Linux")
-        `cat` is the name of a search category in ('all', 'anime', 'books', 'games', 'movies', 'music', 'pictures', 'software', 'tv')
-        """
-
         search_url = f"{self.url}/buscar/{what.replace('+','%20')}"
-
         html = retrieve_url(search_url)
         """
         Para saber si ha encontrado torrents, en dontorrent te muestra un mensaje con la cantidad de torrents encontrados
