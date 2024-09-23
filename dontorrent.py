@@ -137,7 +137,7 @@ class dontorrent(object):
             item['leech'] = '-1'
             item['engine_url'] = self.url
             item['desc_link'] = i
-            item['name'] = (name:=i.split("/")[-1].replace("-", " "))
+            item['name'] = name = i.split("/")[-1].replace("-", " ")
 
             if i.split("/")[1] != "serie":
                 tam = re.findall(r'<p.*?class="mb-0.*?</p>', html)
