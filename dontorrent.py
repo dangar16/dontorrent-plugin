@@ -7,7 +7,7 @@ from novaprinter import prettyPrinter
 import re
 
 class dontorrent(object):
-    url = 'https://dontorrent.exposed'
+    url = 'https://dontorrent.exposed/'
     name = 'DonTorrent'
     supported_categories = {
         'all': '',
@@ -19,7 +19,7 @@ class dontorrent(object):
         """
 
     def download_torrent(self, url):
-        return download_file(url)
+        print(download_file(url))
         
 
     # DO NOT CHANGE the name and parameters of this function
@@ -138,3 +138,6 @@ class dontorrent(object):
                         prettyPrinter(item)
                     except Exception:
                         continue
+
+don = dontorrent()
+don.search('matrix')
