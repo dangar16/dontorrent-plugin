@@ -7,7 +7,7 @@ from novaprinter import prettyPrinter
 import re
 
 class dontorrent(object):
-    url = 'https://dontorrent.co'
+    url = 'https://dontorrent.prof'
     name = 'DonTorrent'
     supported_categories = {
         'all': '',
@@ -138,4 +138,5 @@ class dontorrent(object):
                         prettyPrinter(item)
                     except Exception:
                         continue
+
 
